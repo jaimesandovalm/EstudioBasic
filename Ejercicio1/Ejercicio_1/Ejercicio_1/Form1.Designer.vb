@@ -22,6 +22,7 @@ Partial Class Form1
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
@@ -88,26 +89,42 @@ Partial Class Form1
         Me.Label16 = New System.Windows.Forms.Label()
         Me.TabPage5 = New System.Windows.Forms.TabPage()
         Me.GroupBox10 = New System.Windows.Forms.GroupBox()
-        Me.GroupBox9 = New System.Windows.Forms.GroupBox()
+        Me.txtutilidad = New System.Windows.Forms.TextBox()
         Me.Label23 = New System.Windows.Forms.Label()
+        Me.GroupBox9 = New System.Windows.Forms.GroupBox()
+        Me.cboantiguedad = New System.Windows.Forms.ComboBox()
+        Me.btnsaliruti = New System.Windows.Forms.Button()
+        Me.btnutilidad = New System.Windows.Forms.Button()
+        Me.btnnuevouti = New System.Windows.Forms.Button()
         Me.Label22 = New System.Windows.Forms.Label()
         Me.Label21 = New System.Windows.Forms.Label()
-        Me.txtsalario = New System.Windows.Forms.TextBox()
-        Me.txtutilidad = New System.Windows.Forms.TextBox()
-        Me.btnnuevouti = New System.Windows.Forms.Button()
-        Me.btnutilidad = New System.Windows.Forms.Button()
-        Me.btnsaliruti = New System.Windows.Forms.Button()
-        Me.cboantiguedad = New System.Windows.Forms.ComboBox()
         Me.TabPage6 = New System.Windows.Forms.TabPage()
-        Me.GroupBox11 = New System.Windows.Forms.GroupBox()
         Me.GroupBox12 = New System.Windows.Forms.GroupBox()
-        Me.Label24 = New System.Windows.Forms.Label()
-        Me.Label25 = New System.Windows.Forms.Label()
-        Me.txtnumero = New System.Windows.Forms.TextBox()
         Me.txtdia = New System.Windows.Forms.TextBox()
-        Me.btnnuevodia = New System.Windows.Forms.Button()
-        Me.btndia = New System.Windows.Forms.Button()
+        Me.Label25 = New System.Windows.Forms.Label()
+        Me.GroupBox11 = New System.Windows.Forms.GroupBox()
         Me.btnsalirdia = New System.Windows.Forms.Button()
+        Me.btndia = New System.Windows.Forms.Button()
+        Me.btnnuevodia = New System.Windows.Forms.Button()
+        Me.txtnumero = New System.Windows.Forms.TextBox()
+        Me.Label24 = New System.Windows.Forms.Label()
+        Me.TabPage7 = New System.Windows.Forms.TabPage()
+        Me.btnsalirMs = New System.Windows.Forms.Button()
+        Me.btningreso = New System.Windows.Forms.Button()
+        Me.TabPage8 = New System.Windows.Forms.TabPage()
+        Me.GroupBox13 = New System.Windows.Forms.GroupBox()
+        Me.txtsario = New System.Windows.Forms.TextBox()
+        Me.lblsalir = New System.Windows.Forms.LinkLabel()
+        Me.txtenviar = New System.Windows.Forms.Button()
+        Me.Button4 = New System.Windows.Forms.Button()
+        Me.txtdescripcion = New System.Windows.Forms.TextBox()
+        Me.txtedad = New System.Windows.Forms.TextBox()
+        Me.txtnombres = New System.Windows.Forms.TextBox()
+        Me.Label29 = New System.Windows.Forms.Label()
+        Me.Label28 = New System.Windows.Forms.Label()
+        Me.Label27 = New System.Windows.Forms.Label()
+        Me.Label26 = New System.Windows.Forms.Label()
+        Me.erroricono = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
@@ -125,8 +142,12 @@ Partial Class Form1
         Me.GroupBox10.SuspendLayout()
         Me.GroupBox9.SuspendLayout()
         Me.TabPage6.SuspendLayout()
-        Me.GroupBox11.SuspendLayout()
         Me.GroupBox12.SuspendLayout()
+        Me.GroupBox11.SuspendLayout()
+        Me.TabPage7.SuspendLayout()
+        Me.TabPage8.SuspendLayout()
+        Me.GroupBox13.SuspendLayout()
+        CType(Me.erroricono, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TabControl1
@@ -137,6 +158,8 @@ Partial Class Form1
         Me.TabControl1.Controls.Add(Me.TabPage4)
         Me.TabControl1.Controls.Add(Me.TabPage5)
         Me.TabControl1.Controls.Add(Me.TabPage6)
+        Me.TabControl1.Controls.Add(Me.TabPage7)
+        Me.TabControl1.Controls.Add(Me.TabPage8)
         Me.TabControl1.Location = New System.Drawing.Point(13, 13)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
@@ -784,21 +807,12 @@ Partial Class Form1
         Me.GroupBox10.TabIndex = 1
         Me.GroupBox10.TabStop = False
         '
-        'GroupBox9
+        'txtutilidad
         '
-        Me.GroupBox9.Controls.Add(Me.cboantiguedad)
-        Me.GroupBox9.Controls.Add(Me.btnsaliruti)
-        Me.GroupBox9.Controls.Add(Me.btnutilidad)
-        Me.GroupBox9.Controls.Add(Me.btnnuevouti)
-        Me.GroupBox9.Controls.Add(Me.txtsalario)
-        Me.GroupBox9.Controls.Add(Me.Label22)
-        Me.GroupBox9.Controls.Add(Me.Label21)
-        Me.GroupBox9.Location = New System.Drawing.Point(4, 4)
-        Me.GroupBox9.Name = "GroupBox9"
-        Me.GroupBox9.Size = New System.Drawing.Size(419, 162)
-        Me.GroupBox9.TabIndex = 0
-        Me.GroupBox9.TabStop = False
-        Me.GroupBox9.Text = "Ingresar Datos"
+        Me.txtutilidad.Location = New System.Drawing.Point(127, 63)
+        Me.txtutilidad.Name = "txtutilidad"
+        Me.txtutilidad.Size = New System.Drawing.Size(172, 20)
+        Me.txtutilidad.TabIndex = 4
         '
         'Label23
         '
@@ -809,6 +823,58 @@ Partial Class Form1
         Me.Label23.Size = New System.Drawing.Size(77, 14)
         Me.Label23.TabIndex = 2
         Me.Label23.Text = "Utilidad :"
+        '
+        'GroupBox9
+        '
+        Me.GroupBox9.Controls.Add(Me.cboantiguedad)
+        Me.GroupBox9.Controls.Add(Me.btnsaliruti)
+        Me.GroupBox9.Controls.Add(Me.btnutilidad)
+        Me.GroupBox9.Controls.Add(Me.btnnuevouti)
+        Me.GroupBox9.Controls.Add(Me.Label22)
+        Me.GroupBox9.Controls.Add(Me.Label21)
+        Me.GroupBox9.Location = New System.Drawing.Point(4, 4)
+        Me.GroupBox9.Name = "GroupBox9"
+        Me.GroupBox9.Size = New System.Drawing.Size(419, 162)
+        Me.GroupBox9.TabIndex = 0
+        Me.GroupBox9.TabStop = False
+        Me.GroupBox9.Text = "Ingresar Datos"
+        '
+        'cboantiguedad
+        '
+        Me.cboantiguedad.FormattingEnabled = True
+        Me.cboantiguedad.Items.AddRange(New Object() {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"})
+        Me.cboantiguedad.Location = New System.Drawing.Point(152, 101)
+        Me.cboantiguedad.Name = "cboantiguedad"
+        Me.cboantiguedad.Size = New System.Drawing.Size(121, 21)
+        Me.cboantiguedad.TabIndex = 7
+        Me.cboantiguedad.Text = "0"
+        '
+        'btnsaliruti
+        '
+        Me.btnsaliruti.Location = New System.Drawing.Point(314, 97)
+        Me.btnsaliruti.Name = "btnsaliruti"
+        Me.btnsaliruti.Size = New System.Drawing.Size(75, 23)
+        Me.btnsaliruti.TabIndex = 6
+        Me.btnsaliruti.Text = "Salir"
+        Me.btnsaliruti.UseVisualStyleBackColor = True
+        '
+        'btnutilidad
+        '
+        Me.btnutilidad.Location = New System.Drawing.Point(314, 68)
+        Me.btnutilidad.Name = "btnutilidad"
+        Me.btnutilidad.Size = New System.Drawing.Size(75, 23)
+        Me.btnutilidad.TabIndex = 5
+        Me.btnutilidad.Text = "Utilidad"
+        Me.btnutilidad.UseVisualStyleBackColor = True
+        '
+        'btnnuevouti
+        '
+        Me.btnnuevouti.Location = New System.Drawing.Point(314, 39)
+        Me.btnnuevouti.Name = "btnnuevouti"
+        Me.btnnuevouti.Size = New System.Drawing.Size(75, 23)
+        Me.btnnuevouti.TabIndex = 4
+        Me.btnnuevouti.Text = "Nuevo"
+        Me.btnnuevouti.UseVisualStyleBackColor = True
         '
         'Label22
         '
@@ -830,57 +896,6 @@ Partial Class Form1
         Me.Label21.TabIndex = 0
         Me.Label21.Text = "Salario :"
         '
-        'txtsalario
-        '
-        Me.txtsalario.Location = New System.Drawing.Point(152, 42)
-        Me.txtsalario.Name = "txtsalario"
-        Me.txtsalario.Size = New System.Drawing.Size(121, 20)
-        Me.txtsalario.TabIndex = 2
-        '
-        'txtutilidad
-        '
-        Me.txtutilidad.Location = New System.Drawing.Point(127, 63)
-        Me.txtutilidad.Name = "txtutilidad"
-        Me.txtutilidad.Size = New System.Drawing.Size(172, 20)
-        Me.txtutilidad.TabIndex = 4
-        '
-        'btnnuevouti
-        '
-        Me.btnnuevouti.Location = New System.Drawing.Point(314, 39)
-        Me.btnnuevouti.Name = "btnnuevouti"
-        Me.btnnuevouti.Size = New System.Drawing.Size(75, 23)
-        Me.btnnuevouti.TabIndex = 4
-        Me.btnnuevouti.Text = "Nuevo"
-        Me.btnnuevouti.UseVisualStyleBackColor = True
-        '
-        'btnutilidad
-        '
-        Me.btnutilidad.Location = New System.Drawing.Point(314, 68)
-        Me.btnutilidad.Name = "btnutilidad"
-        Me.btnutilidad.Size = New System.Drawing.Size(75, 23)
-        Me.btnutilidad.TabIndex = 5
-        Me.btnutilidad.Text = "Utilidad"
-        Me.btnutilidad.UseVisualStyleBackColor = True
-        '
-        'btnsaliruti
-        '
-        Me.btnsaliruti.Location = New System.Drawing.Point(314, 97)
-        Me.btnsaliruti.Name = "btnsaliruti"
-        Me.btnsaliruti.Size = New System.Drawing.Size(75, 23)
-        Me.btnsaliruti.TabIndex = 6
-        Me.btnsaliruti.Text = "Salir"
-        Me.btnsaliruti.UseVisualStyleBackColor = True
-        '
-        'cboantiguedad
-        '
-        Me.cboantiguedad.FormattingEnabled = True
-        Me.cboantiguedad.Items.AddRange(New Object() {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"})
-        Me.cboantiguedad.Location = New System.Drawing.Point(152, 101)
-        Me.cboantiguedad.Name = "cboantiguedad"
-        Me.cboantiguedad.Size = New System.Drawing.Size(121, 21)
-        Me.cboantiguedad.TabIndex = 7
-        Me.cboantiguedad.Text = "0"
-        '
         'TabPage6
         '
         Me.TabPage6.Controls.Add(Me.GroupBox12)
@@ -891,6 +906,34 @@ Partial Class Form1
         Me.TabPage6.TabIndex = 5
         Me.TabPage6.Text = "Select Case"
         Me.TabPage6.UseVisualStyleBackColor = True
+        '
+        'GroupBox12
+        '
+        Me.GroupBox12.Controls.Add(Me.txtdia)
+        Me.GroupBox12.Controls.Add(Me.Label25)
+        Me.GroupBox12.Location = New System.Drawing.Point(4, 175)
+        Me.GroupBox12.Name = "GroupBox12"
+        Me.GroupBox12.Size = New System.Drawing.Size(614, 135)
+        Me.GroupBox12.TabIndex = 1
+        Me.GroupBox12.TabStop = False
+        Me.GroupBox12.Text = "Dia"
+        '
+        'txtdia
+        '
+        Me.txtdia.Location = New System.Drawing.Point(271, 49)
+        Me.txtdia.Name = "txtdia"
+        Me.txtdia.Size = New System.Drawing.Size(183, 20)
+        Me.txtdia.TabIndex = 2
+        '
+        'Label25
+        '
+        Me.Label25.AutoSize = True
+        Me.Label25.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label25.Location = New System.Drawing.Point(195, 52)
+        Me.Label25.Name = "Label25"
+        Me.Label25.Size = New System.Drawing.Size(42, 14)
+        Me.Label25.TabIndex = 1
+        Me.Label25.Text = "Dia :"
         '
         'GroupBox11
         '
@@ -906,16 +949,39 @@ Partial Class Form1
         Me.GroupBox11.TabStop = False
         Me.GroupBox11.Text = "Ingrese Dia Semana"
         '
-        'GroupBox12
+        'btnsalirdia
         '
-        Me.GroupBox12.Controls.Add(Me.txtdia)
-        Me.GroupBox12.Controls.Add(Me.Label25)
-        Me.GroupBox12.Location = New System.Drawing.Point(4, 175)
-        Me.GroupBox12.Name = "GroupBox12"
-        Me.GroupBox12.Size = New System.Drawing.Size(614, 135)
-        Me.GroupBox12.TabIndex = 1
-        Me.GroupBox12.TabStop = False
-        Me.GroupBox12.Text = "Dia"
+        Me.btnsalirdia.Location = New System.Drawing.Point(369, 108)
+        Me.btnsalirdia.Name = "btnsalirdia"
+        Me.btnsalirdia.Size = New System.Drawing.Size(75, 23)
+        Me.btnsalirdia.TabIndex = 4
+        Me.btnsalirdia.Text = "Salir"
+        Me.btnsalirdia.UseVisualStyleBackColor = True
+        '
+        'btndia
+        '
+        Me.btndia.Location = New System.Drawing.Point(271, 108)
+        Me.btndia.Name = "btndia"
+        Me.btndia.Size = New System.Drawing.Size(75, 23)
+        Me.btndia.TabIndex = 3
+        Me.btndia.Text = "Dia"
+        Me.btndia.UseVisualStyleBackColor = True
+        '
+        'btnnuevodia
+        '
+        Me.btnnuevodia.Location = New System.Drawing.Point(171, 108)
+        Me.btnnuevodia.Name = "btnnuevodia"
+        Me.btnnuevodia.Size = New System.Drawing.Size(75, 23)
+        Me.btnnuevodia.TabIndex = 2
+        Me.btnnuevodia.Text = "Nuevo"
+        Me.btnnuevodia.UseVisualStyleBackColor = True
+        '
+        'txtnumero
+        '
+        Me.txtnumero.Location = New System.Drawing.Point(271, 53)
+        Me.txtnumero.Name = "txtnumero"
+        Me.txtnumero.Size = New System.Drawing.Size(100, 20)
+        Me.txtnumero.TabIndex = 1
         '
         'Label24
         '
@@ -927,56 +993,167 @@ Partial Class Form1
         Me.Label24.TabIndex = 0
         Me.Label24.Text = "Numero : "
         '
-        'Label25
+        'TabPage7
         '
-        Me.Label25.AutoSize = True
-        Me.Label25.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label25.Location = New System.Drawing.Point(195, 52)
-        Me.Label25.Name = "Label25"
-        Me.Label25.Size = New System.Drawing.Size(42, 14)
-        Me.Label25.TabIndex = 1
-        Me.Label25.Text = "Dia :"
+        Me.TabPage7.Controls.Add(Me.btnsalirMs)
+        Me.TabPage7.Controls.Add(Me.btningreso)
+        Me.TabPage7.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage7.Name = "TabPage7"
+        Me.TabPage7.Size = New System.Drawing.Size(621, 331)
+        Me.TabPage7.TabIndex = 6
+        Me.TabPage7.Text = "MessageBox"
+        Me.TabPage7.UseVisualStyleBackColor = True
         '
-        'txtnumero
+        'btnsalirMs
         '
-        Me.txtnumero.Location = New System.Drawing.Point(271, 53)
-        Me.txtnumero.Name = "txtnumero"
-        Me.txtnumero.Size = New System.Drawing.Size(100, 20)
-        Me.txtnumero.TabIndex = 1
+        Me.btnsalirMs.Location = New System.Drawing.Point(391, 220)
+        Me.btnsalirMs.Name = "btnsalirMs"
+        Me.btnsalirMs.Size = New System.Drawing.Size(152, 58)
+        Me.btnsalirMs.TabIndex = 1
+        Me.btnsalirMs.Text = "Salir"
+        Me.btnsalirMs.UseVisualStyleBackColor = True
         '
-        'txtdia
+        'btningreso
         '
-        Me.txtdia.Location = New System.Drawing.Point(271, 49)
-        Me.txtdia.Name = "txtdia"
-        Me.txtdia.Size = New System.Drawing.Size(183, 20)
-        Me.txtdia.TabIndex = 2
+        Me.btningreso.Location = New System.Drawing.Point(152, 71)
+        Me.btningreso.Name = "btningreso"
+        Me.btningreso.Size = New System.Drawing.Size(168, 65)
+        Me.btningreso.TabIndex = 0
+        Me.btningreso.Text = "Ingreso"
+        Me.btningreso.UseVisualStyleBackColor = True
         '
-        'btnnuevodia
+        'TabPage8
         '
-        Me.btnnuevodia.Location = New System.Drawing.Point(171, 108)
-        Me.btnnuevodia.Name = "btnnuevodia"
-        Me.btnnuevodia.Size = New System.Drawing.Size(75, 23)
-        Me.btnnuevodia.TabIndex = 2
-        Me.btnnuevodia.Text = "Nuevo"
-        Me.btnnuevodia.UseVisualStyleBackColor = True
+        Me.TabPage8.Controls.Add(Me.GroupBox13)
+        Me.TabPage8.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage8.Name = "TabPage8"
+        Me.TabPage8.Size = New System.Drawing.Size(621, 331)
+        Me.TabPage8.TabIndex = 7
+        Me.TabPage8.Text = "Validación "
+        Me.TabPage8.UseVisualStyleBackColor = True
         '
-        'btndia
+        'GroupBox13
         '
-        Me.btndia.Location = New System.Drawing.Point(271, 108)
-        Me.btndia.Name = "btndia"
-        Me.btndia.Size = New System.Drawing.Size(75, 23)
-        Me.btndia.TabIndex = 3
-        Me.btndia.Text = "Dia"
-        Me.btndia.UseVisualStyleBackColor = True
+        Me.GroupBox13.Controls.Add(Me.txtsario)
+        Me.GroupBox13.Controls.Add(Me.lblsalir)
+        Me.GroupBox13.Controls.Add(Me.txtenviar)
+        Me.GroupBox13.Controls.Add(Me.Button4)
+        Me.GroupBox13.Controls.Add(Me.txtdescripcion)
+        Me.GroupBox13.Controls.Add(Me.txtedad)
+        Me.GroupBox13.Controls.Add(Me.txtnombres)
+        Me.GroupBox13.Controls.Add(Me.Label29)
+        Me.GroupBox13.Controls.Add(Me.Label28)
+        Me.GroupBox13.Controls.Add(Me.Label27)
+        Me.GroupBox13.Controls.Add(Me.Label26)
+        Me.GroupBox13.Location = New System.Drawing.Point(4, 4)
+        Me.GroupBox13.Name = "GroupBox13"
+        Me.GroupBox13.Size = New System.Drawing.Size(614, 324)
+        Me.GroupBox13.TabIndex = 0
+        Me.GroupBox13.TabStop = False
+        Me.GroupBox13.Text = "Ingrese Datos"
         '
-        'btnsalirdia
+        'txtsario
         '
-        Me.btnsalirdia.Location = New System.Drawing.Point(369, 108)
-        Me.btnsalirdia.Name = "btnsalirdia"
-        Me.btnsalirdia.Size = New System.Drawing.Size(75, 23)
-        Me.btnsalirdia.TabIndex = 4
-        Me.btnsalirdia.Text = "Salir"
-        Me.btnsalirdia.UseVisualStyleBackColor = True
+        Me.txtsario.Location = New System.Drawing.Point(146, 126)
+        Me.txtsario.Name = "txtsario"
+        Me.txtsario.Size = New System.Drawing.Size(150, 20)
+        Me.txtsario.TabIndex = 11
+        '
+        'lblsalir
+        '
+        Me.lblsalir.AutoSize = True
+        Me.lblsalir.Location = New System.Drawing.Point(521, 35)
+        Me.lblsalir.Name = "lblsalir"
+        Me.lblsalir.Size = New System.Drawing.Size(27, 13)
+        Me.lblsalir.TabIndex = 10
+        Me.lblsalir.TabStop = True
+        Me.lblsalir.Text = "Salir"
+        '
+        'txtenviar
+        '
+        Me.txtenviar.Location = New System.Drawing.Point(521, 262)
+        Me.txtenviar.Name = "txtenviar"
+        Me.txtenviar.Size = New System.Drawing.Size(75, 52)
+        Me.txtenviar.TabIndex = 9
+        Me.txtenviar.Text = "Enviar"
+        Me.txtenviar.UseVisualStyleBackColor = True
+        '
+        'Button4
+        '
+        Me.Button4.Location = New System.Drawing.Point(521, 193)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(75, 49)
+        Me.Button4.TabIndex = 8
+        Me.Button4.Text = "Nuevo"
+        Me.Button4.UseVisualStyleBackColor = True
+        '
+        'txtdescripcion
+        '
+        Me.txtdescripcion.Location = New System.Drawing.Point(146, 174)
+        Me.txtdescripcion.Multiline = True
+        Me.txtdescripcion.Name = "txtdescripcion"
+        Me.txtdescripcion.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
+        Me.txtdescripcion.ShortcutsEnabled = False
+        Me.txtdescripcion.Size = New System.Drawing.Size(346, 140)
+        Me.txtdescripcion.TabIndex = 7
+        '
+        'txtedad
+        '
+        Me.txtedad.Location = New System.Drawing.Point(146, 75)
+        Me.txtedad.Name = "txtedad"
+        Me.txtedad.Size = New System.Drawing.Size(100, 20)
+        Me.txtedad.TabIndex = 5
+        '
+        'txtnombres
+        '
+        Me.txtnombres.Location = New System.Drawing.Point(146, 32)
+        Me.txtnombres.Name = "txtnombres"
+        Me.txtnombres.Size = New System.Drawing.Size(230, 20)
+        Me.txtnombres.TabIndex = 4
+        '
+        'Label29
+        '
+        Me.Label29.AutoSize = True
+        Me.Label29.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label29.Location = New System.Drawing.Point(31, 177)
+        Me.Label29.Name = "Label29"
+        Me.Label29.Size = New System.Drawing.Size(98, 14)
+        Me.Label29.TabIndex = 3
+        Me.Label29.Text = "Descripción :"
+        '
+        'Label28
+        '
+        Me.Label28.AutoSize = True
+        Me.Label28.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label28.Location = New System.Drawing.Point(31, 126)
+        Me.Label28.Name = "Label28"
+        Me.Label28.Size = New System.Drawing.Size(70, 14)
+        Me.Label28.TabIndex = 2
+        Me.Label28.Text = "Salario :"
+        '
+        'Label27
+        '
+        Me.Label27.AutoSize = True
+        Me.Label27.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label27.Location = New System.Drawing.Point(31, 81)
+        Me.Label27.Name = "Label27"
+        Me.Label27.Size = New System.Drawing.Size(49, 14)
+        Me.Label27.TabIndex = 1
+        Me.Label27.Text = "Edad :"
+        '
+        'Label26
+        '
+        Me.Label26.AutoSize = True
+        Me.Label26.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label26.Location = New System.Drawing.Point(31, 35)
+        Me.Label26.Name = "Label26"
+        Me.Label26.Size = New System.Drawing.Size(70, 14)
+        Me.Label26.TabIndex = 0
+        Me.Label26.Text = "Nombres :"
+        '
+        'erroricono
+        '
+        Me.erroricono.ContainerControl = Me
         '
         'Form1
         '
@@ -1013,10 +1190,15 @@ Partial Class Form1
         Me.GroupBox9.ResumeLayout(False)
         Me.GroupBox9.PerformLayout()
         Me.TabPage6.ResumeLayout(False)
-        Me.GroupBox11.ResumeLayout(False)
-        Me.GroupBox11.PerformLayout()
         Me.GroupBox12.ResumeLayout(False)
         Me.GroupBox12.PerformLayout()
+        Me.GroupBox11.ResumeLayout(False)
+        Me.GroupBox11.PerformLayout()
+        Me.TabPage7.ResumeLayout(False)
+        Me.TabPage8.ResumeLayout(False)
+        Me.GroupBox13.ResumeLayout(False)
+        Me.GroupBox13.PerformLayout()
+        CType(Me.erroricono, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -1095,7 +1277,7 @@ Partial Class Form1
     Friend WithEvents btnsaliruti As Button
     Friend WithEvents btnutilidad As Button
     Friend WithEvents btnnuevouti As Button
-    Friend WithEvents txtsalario As TextBox
+    Friend WithEvents txtsalariovali As TextBox
     Friend WithEvents cboantiguedad As ComboBox
     Friend WithEvents TabPage6 As TabPage
     Friend WithEvents GroupBox12 As GroupBox
@@ -1107,4 +1289,23 @@ Partial Class Form1
     Friend WithEvents btnnuevodia As Button
     Friend WithEvents txtnumero As TextBox
     Friend WithEvents Label24 As Label
+    Friend WithEvents TabPage7 As TabPage
+    Friend WithEvents btnsalirMs As Button
+    Friend WithEvents btningreso As Button
+    Friend WithEvents TabPage8 As TabPage
+    Friend WithEvents GroupBox13 As GroupBox
+    Friend WithEvents txtdescripcion As TextBox
+    Friend WithEvents txtsalariovali As TextBox
+    Friend WithEvents txtedad As TextBox
+    Friend WithEvents txtnombres As TextBox
+    Friend WithEvents Label29 As Label
+    Friend WithEvents Label28 As Label
+    Friend WithEvents Label27 As Label
+    Friend WithEvents Label26 As Label
+    Friend WithEvents lblsalir As LinkLabel
+    Friend WithEvents txtenviar As Button
+    Friend WithEvents Button4 As Button
+    Friend WithEvents erroricono As ErrorProvider
+    Private txtsalariovalidate As TextBox
+    Friend WithEvents txtsario As TextBox
 End Class

@@ -1,4 +1,6 @@
-﻿Public Class Form1
+﻿Imports System.ComponentModel
+
+Public Class Form1
     Private Sub GroupBox1_Enter(sender As Object, e As EventArgs) Handles GroupBox1.Enter
 
     End Sub
@@ -162,7 +164,7 @@
         Dim antiguedad As Byte
 
         'Entrada de Datos
-        salario = Val(txtsalario.Text)
+        salario = Val(txtsalariovali.Text)
         antiguedad = Val(cboantiguedad.Text)
 
         'Proceso
@@ -184,8 +186,8 @@
     End Sub
 
     Private Sub btnnuevouti_Click(sender As Object, e As EventArgs) Handles btnnuevouti.Click
-        txtsalario.Clear()
-        txtsalario.Clear()
+        txtsalariovali.Clear()
+        txtsalariovali.Clear()
 
     End Sub
 
@@ -236,4 +238,68 @@
     Private Sub Button6_Click(sender As Object, e As EventArgs) Handles btnsalirdia.Click
         Me.Close()
     End Sub
+
+    Private Sub btningreso_Click(sender As Object, e As EventArgs) Handles btningreso.Click
+        'Declaracion de Variables
+        Dim nombre As String
+
+        'Entrada de datos
+        nombre = InputBox("Ingrese Nombre", "Registro de Datos", "Nombre", 100, 0)
+        MessageBox.Show("Bienvenido Usuario: " & nombre, "Registro de Datos", MessageBoxButtons.OK, MessageBoxIcon.Information)
+
+    End Sub
+
+    Private Sub btnsalirMs_Click(sender As Object, e As EventArgs) Handles btnsalirMs.Click
+        'Declaracion de Variables
+        Dim opcion As DialogResult
+
+        opcion = MessageBox.Show("Desea Salir de la App?", "Salir de la App", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+        If (opcion = DialogResult.Yes) Then
+            Me.Close()
+
+        End If
+    End Sub
+
+    Private Sub lblsalir_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles lblsalir.LinkClicked
+        Me.Close()
+
+    End Sub
+
+    Private Sub Button4_Click_1(sender As Object, e As EventArgs) Handles Button4.Click
+        txtnombres.Clear()
+        txtedad.Clear()
+        txtsario.Clear()
+        txtdescripcion.Clear()
+
+    End Sub
+
+    Private Sub txtenviar_Click(sender As Object, e As EventArgs) Handles txtenviar.Click
+        Try
+            If Me.ValidateChildren And txtnombres.Text <> String.Empty And Val(txtedad.Text) - Int(Val(txtedad.Text)) = 0 And txtsario.Text <> String.Empty Then
+                MessageBox.Show("Datos Ingresados Correctamente", "Registro de Usuarios", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            Else
+                MessageBox.Show("Ingrese Correctamente Algunos Datos Marcados", "Registro de Usuarios", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            End If
+        Catch ex As Exception
+
+        End Try
+    End Sub
+
+    Private Sub txtnombres_Validating(sender As Object, e As CancelEventArgs) Handles txtnombres.Validating
+        If DirectCast(sender, TextBox).Text.Length > 0 Then
+            Me.erroricono.SetError(sender, "")
+        Else
+            Me.erroricono.SetError(sender, "Campo Obligatorio")
+        End If
+    End Sub
+
+
+    Private Sub txtsario_Validating(sender As Object, e As CancelEventArgs) Handles txtsario.Validating
+        If DirectCast(sender, TextBox).Text.Length > 0 Then
+            Me.erroricono.SetError(sender, "")
+        Else
+            Me.erroricono.SetError(sender, "Campo Obligatorio")
+        End If
+    End Sub
+
 End Class
